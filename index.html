@@ -181,7 +181,7 @@ body.calm .panel { animation:none }
 <div class="bg-dots"></div>
 <div class="app">
 <header>
-  <div class="brand"><div class="brand-icon">🧸</div><div>bear <em>& bloom</em></div></div>
+  <div class="brand"><div class="brand-icon">🐻</div><div>bear <em>& bloom</em></div></div>
   <div class="header-actions">
     <span class="pill">♡ COZY STUDY CLUB</span>
     <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">☾</button>
@@ -228,7 +228,7 @@ body.calm .panel { animation:none }
       <circle class="ring-progress" id="ringProgress" cx="100" cy="100" r="90"/>
     </svg>
     <div class="clock-content">
-      <div class="bear" id="timerBear">🧸</div>
+      <div class="bear" id="timerBear">🐻</div>
       <div class="clock" id="clock" role="timer" aria-label="Time remaining">25:00</div>
       <div class="clock-caption" id="clockCaption">TIME TO BLOOM ✿</div>
     </div>
@@ -245,7 +245,7 @@ body.calm .panel { animation:none }
 <aside class="side">
 <section class="panel bear-panel">
   <div class="mini-title">YOUR STUDY BUDDY</div>
-  <span class="big-bear" id="bigBear">🧸</span>
+  <span class="big-bear" id="bigBear">🐻</span>
   <div class="quote" id="bearQuote">"You don't have to do it all. Just start with one little thing."</div>
   <div class="bear-sub" id="bearSub">♡ your bear believes in you ♡</div>
 </section>
@@ -296,7 +296,7 @@ body.calm .panel { animation:none }
 </section>
 </div>
 </main>
-<footer>made with <strong>♡</strong>, warm cocoa & little bear hugs · <strong>bear & bloom</strong> 🧸</footer>
+<footer>made with <strong>♡</strong>, warm cocoa & little bear hugs · <strong>bear & bloom</strong> 🐻</footer>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -404,9 +404,9 @@ function formatTime(sec) {
 
 function timerTitle() {
   const titles = {
-    focus: ['TIME TO BLOOM ✿','🧸','Ready to grow something wonderful?','Let’s focus, little bear!'],
+    focus: ['TIME TO BLOOM ✿','🐻','Ready to grow something wonderful?','Let’s focus, little bear!'],
     break: ['A LITTLE BREATHER ☁️','🐻','Rest, stretch, and sip some water.','Break time is your time.'],
-    long: ['COZY RECHARGE 🌙','🧸','Slow down. You have earned a pause.','Enjoy your peaceful break.'],
+    long: ['COZY RECHARGE 🌙','🐻','Slow down. You have earned a pause.','Enjoy your peaceful break.'],
     stopwatch: ['YOUR STUDY TIME ✿','🐻','Every minute counts.','Look at you, showing up!']
   };
   const v = titles[tab];
@@ -488,7 +488,7 @@ function beginTimer() {
   stopTicker();
   ticker = setInterval(tick, 200);
   paint();
-  showToast(tab === 'stopwatch' ? 'Your stopwatch is running! ⏱' : 'You’ve got this, little bear! 🧸');
+  showToast(tab === 'stopwatch' ? 'Your stopwatch is running! ⏱' : 'You’ve got this, little bear! 🐻');
 }
 
 function resetTimer() {
@@ -539,8 +539,8 @@ function completeSession() {
     save();
     paintStats();
     $('timerNote').textContent = 'Your break is complete. Ready when you are.';
-    $('timerBear').textContent = '🧸';
-    $('bigBear').textContent = '🧸';
+    $('timerBear').textContent = '🐻';
+    $('bigBear').textContent = '🐻';
     showToast('Break complete! You can do this. ♡');
   }
 
@@ -548,7 +548,7 @@ function completeSession() {
   paint();
   if (data.sound) chime();
   if (data.sparkles) celebrate();
-  document.title = 'Session complete! 🧸';
+  document.title = 'Session complete! 🐻';
 }
 
 function tick() {
